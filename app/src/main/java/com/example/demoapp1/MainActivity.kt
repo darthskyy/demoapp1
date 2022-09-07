@@ -10,7 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 const val EXTRA_MESSAGE = "com.example.demoapp1.MESSAGE"
-
+const val CURRENT_LETTER = "com.example.demoapp1.LETTER"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,11 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun  sendMessage(view: View) {
-        val editText = findViewById<EditText>(R.id.editText)
-        val message = editText.text.toString()
-        val intent = Intent(this, LetterActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
-        }
+        val intent = Intent(this, LetterActivity::class.java)
         startActivity(intent)
     }
 }

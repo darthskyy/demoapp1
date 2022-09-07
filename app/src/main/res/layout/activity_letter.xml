@@ -43,13 +43,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="goToPrev"
             android:text="@string/button_prev"></Button>
 
         <Button
-            android:id="@+id/next_id"
+            android:id="@+id/next_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:hapticFeedbackEnabled="true"
+            android:onClick="goToNext"
             android:text="@string/button_next"></Button>
 
         <Button
